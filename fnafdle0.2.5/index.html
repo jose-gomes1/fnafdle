@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNAF Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FNAF Guessing Game</h1>
+        
+        <!-- Game Mode Selection -->
+        <div id="mode-selection">
+            <button id="choose-books">Play Book Guessing Game</button>
+            <button id="choose-characters">Play Character Guessing Game</button>
+        </div>
+
+        <!-- Category Selection -->
+        <div id="category-selection" style="display: none;">
+            <label for="category">Choose a category:</label>
+            <select id="category"></select>
+            <button id="start-game">Start Game</button>
+        </div>
+
+        <!-- Game Area -->
+        <div id="game-area" style="display: none;">
+            <p id="display"></p>
+            <p>Guessed Letters: <span id="guessed-letters"></span></p>
+            <p>Remaining Attempts: <span id="attempts"></span></p>
+            <input type="text" id="guess-input" maxlength="50" placeholder="Guess a letter or the full name">
+            <button id="guess-button">Submit Guess</button>
+            <p id="message"></p>
+            <button id="restart-button" style="display: none;">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

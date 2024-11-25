@@ -137,7 +137,7 @@ const fnafImages = {
     "STAFF Bot": "images/characters/staff_bot.png",
     "Map Bot": "images/characters/map_bot.png",
     "Mask Bot": "images/characters/mask_bot.png",
-    "The Mimic": "images/characters/the_mimic.png",
+    "The Mimic": "images/characters/mimic.png",
     "Shattered Roxy": "images/characters/shattered_roxy.png",
     "Shattered Monty": "images/characters/shattered_monty.png",
     "Shattered Chica": "images/characters/shattered_chica.png",

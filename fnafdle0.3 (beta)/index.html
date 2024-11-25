@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNAF Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FNAF Guessing Game</h1>
+
+        <!-- Mode Selection -->
+        <div id="mode-selection">
+            <button id="choose-characters">Play Character Guessing Game</button>
+            <button id="choose-books">Play Book Guessing Game</button>
+        </div>
+
+        <!-- Game Area -->
+        <div id="game-area" style="display: none;">
+            <p id="hint">Hint: The word has <span id="word-length"></span> letters.</p>
+            <p id="display-word"></p>
+            <p>Guessed Letters: <span id="guessed-letters"></span></p>
+            <p>Remaining Attempts: <span id="remaining-attempts"></span></p>
+
+            <input type="text" id="guess-input" placeholder="Guess a letter or the full name" maxlength="50">
+            <button id="guess-button">Guess</button>
+
+            <!-- Dynamic Filtering Suggestions -->
+            <div id="suggestions">
+                <div class="suggestion">Suggestion 1</div>
+                <div class="suggestion">Suggestion 2</div>
+                <div class="suggestion">Suggestion 3</div>
+                <!-- More suggestions... -->
+            </div>
+            
+
+            <p id="message"></p>
+            <button id="restart-button" style="display: none;">Restart Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -68,7 +68,7 @@ input {
     color: #2c3e50;
     border: 1px solid #7f8c8d;
     border-radius: 5px;
-    max-height: 150px;
+    max-height: 200px;
     overflow-y: auto;
 }
 
@@ -103,3 +103,17 @@ input {
     color: white;
 }
 
+/* Book category buttons */
+#book-categories button {
+    background-color: #8e44ad;
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#book-categories button:hover {
+    background-color: #732d91;
+}

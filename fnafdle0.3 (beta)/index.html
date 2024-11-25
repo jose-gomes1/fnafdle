@@ -16,6 +16,16 @@
             <button id="choose-books">Play Book Guessing Game</button>
         </div>
 
+        <!-- Book Categories (hidden by default) -->
+        <div id="book-categories" style="display: none;">
+            <button data-category="trilogy">Trilogy</button>
+            <button data-category="frights">Frights</button>
+            <button data-category="tales">Tales</button>
+            <button data-category="files">Files</button>
+            <button data-category="interactive">Interactive</button>
+            <button data-category="all">All Books</button>
+        </div>
+
         <!-- Game Area -->
         <div id="game-area" style="display: none;">
             <p id="hint">Hint: The word has <span id="word-length"></span> letters.</p>
@@ -33,7 +43,6 @@
                 <div class="suggestion">Suggestion 3</div>
                 <!-- More suggestions... -->
             </div>
-            
 
             <p id="message"></p>
             <button id="restart-button" style="display: none;">Restart Game</button>

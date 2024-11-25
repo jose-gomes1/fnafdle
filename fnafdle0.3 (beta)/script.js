@@ -51,12 +51,13 @@ const books = {
     ]
 };
 
-let currentWord = ""; // The word to guess
-let displayWord = []; // The current displayed state of the word
-let guessedLetters = new Set(); // Already guessed letters
-let attemptsLeft = 7; // Remaining attempts
-let currentList = []; // Current active list (characters or books)
-let currentIndex = -1; // Tracks the current highlighted suggestion
+// Game state variables
+let currentWord = ""; 
+let displayWord = []; 
+let guessedLetters = new Set(); 
+let attemptsLeft = 7; 
+let currentList = []; 
+let currentIndex = -1;
 
 // Game elements
 const modeSelection = document.getElementById("mode-selection");
@@ -83,8 +84,7 @@ function startGame(wordList) {
     bookCategories.style.display = "none";
     document.getElementById("hint").innerHTML = `Hint: The word has <strong>${currentWord.replace(/ /g, "").length}</strong> letters.`;
     
-    // Hide the suggestions initially when the game starts
-    suggestionsContainer.style.display = "none"; // No suggestions displayed at start
+    suggestionsContainer.style.display = "none"; // Hide suggestions initially
     suggestionsContainer.innerHTML = ""; // Clear any previous suggestions
     currentIndex = -1; // Reset the suggestion index
 }
@@ -155,19 +155,16 @@ function filterSuggestions(input) {
     }
 
     const filteredList = currentList.filter(item => item.toLowerCase().includes(query));
-
-    // Display suggestions
     suggestionsContainer.innerHTML = filteredList
         .map(item => `<li class="suggestion">${item}</li>`)
         .join("");
-    suggestionsContainer.style.display = "block"; // Show suggestions only after typing
+    suggestionsContainer.style.display = filteredList.length > 0 ? "block" : "none";
 
-    // Add click events to suggestions
     document.querySelectorAll("#suggestions li").forEach(li => {
         li.addEventListener("click", () => {
             document.getElementById("guess-input").value = li.textContent;
             suggestionsContainer.style.display = "none";
-            handleGuess(); // Automatically make a guess if user selects a suggestion
+            handleGuess();
         });
     });
 }
@@ -177,14 +174,13 @@ function endGame() {
     document.getElementById("restart-button").style.display = "block";
 }
 
-// Event listeners for characters and books (unchanged)
+// Event listeners
 document.getElementById("choose-characters").addEventListener("click", () => startGame(characters));
 document.getElementById("choose-books").addEventListener("click", () => {
-    modeSelection.style.display = "none"; // Hide mode selection
-    bookCategories.style.display = "block"; // Show book categories selection
+    modeSelection.style.display = "none";
+    bookCategories.style.display = "block";
 });
 
-// Event listener for book category selection
 document.querySelectorAll("#book-categories button").forEach(button => {
     button.addEventListener("click", (e) => {
         const category = e.target.getAttribute("data-category");
@@ -193,80 +189,36 @@ document.querySelectorAll("#book-categories button").forEach(button => {
 });
 
 document.getElementById("guess-button").addEventListener("click", handleGuess);
-function filterSuggestions(input) {
-    const query = input.trim().toLowerCase();
-    if (!query) {
-        suggestionsContainer.style.display = "none"; // Hide suggestions when no input
-        return;
-    }
-
-    const filteredList = currentList.filter(item => item.toLowerCase().includes(query));
-
-    // Clear suggestions before adding new ones
-    suggestionsContainer.innerHTML = "";
-    
-    if (filteredList.length === 0) {
-        suggestionsContainer.style.display = "none"; // Hide suggestions if no matches found
-        return;
-    }
-
-    // Display suggestions
-    suggestionsContainer.innerHTML = filteredList
-        .map(item => `<li class="suggestion">${item}</li>`)
-        .join("");
-    suggestionsContainer.style.display = "block"; // Show suggestions
-
-    // Add click events to suggestions
-    document.querySelectorAll("#suggestions li").forEach(li => {
-        li.addEventListener("click", () => {
-            document.getElementById("guess-input").value = li.textContent;
-            suggestionsContainer.style.display = "none";
-            handleGuess(); // Automatically make a guess if user selects a suggestion
-        });
-    });
-}
 document.getElementById("guess-input").addEventListener("input", (e) => filterSuggestions(e.target.value));
 
 document.getElementById("restart-button").addEventListener("click", () => {
     gameArea.style.display = "none";
     modeSelection.style.display = "block";
-    bookCategories.style.display = "none"; // Hide book categories after restart
+    bookCategories.style.display = "none";
 });
 
-// Arrow key navigation for the suggestions list
+// Arrow key navigation for suggestions
 document.getElementById("guess-input").addEventListener("keydown", (e) => {
     const suggestions = document.getElementById("suggestions").getElementsByClassName("suggestion");
 
     if (suggestions.length > 0) {
         if (e.key === "ArrowDown") {
-            if (currentIndex < suggestions.length - 1) {
-                currentIndex++;
-                suggestions[currentIndex].scrollIntoView({ behavior: "smooth", block: "nearest" });
-            }
+            if (currentIndex < suggestions.length - 1) currentIndex++;
         } else if (e.key === "ArrowUp") {
-            if (currentIndex > 0) {
-                currentIndex--;
-                suggestions[currentIndex].scrollIntoView({ behavior: "smooth", block: "nearest" });
-            }
+            if (currentIndex > 0) currentIndex--;
         } else if (e.key === "Enter" && currentIndex >= 0) {
-            // Select the highlighted suggestion when Enter is pressed
             document.getElementById("guess-input").value = suggestions[currentIndex].textContent;
-            handleGuess(); // Automatically submit the guess
-            suggestionsContainer.style.display = "none"; // Hide suggestions after selection
+            handleGuess();
+            suggestionsContainer.style.display = "none";
         }
 
-        // Highlight the selected suggestion
         Array.from(suggestions).forEach((item, index) => {
-            if (index === currentIndex) {
-                item.classList.add("highlighted");
-            } else {
-                item.classList.remove("highlighted");
-            }
+            item.classList.toggle("highlighted", index === currentIndex);
         });
     }
 });
 
-// CSS to highlight the selected suggestion
+// Add highlighting styles
 const style = document.createElement('style');
 style.innerHTML = `
     .highlighted {

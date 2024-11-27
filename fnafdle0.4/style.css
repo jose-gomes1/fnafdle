@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: hsl(6, 78%, 57%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    width: calc(100% - 24px);
+    margin-bottom: 10px;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+}
+
+#message {
+    font-weight: bold;
+}
+
+#display-word {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    letter-spacing: 5px;
+}
+
+/* Styles for dynamic suggestions */
+#suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#suggestions li {
+    padding: 10px;
+    border-bottom: 1px solid #bdc3c7;
+    cursor: pointer;
+    background-color: #2c3e50;
+    color: white;
+}
+
+#suggestions li:hover {
+    background-color: #2c3e50;
+}
+
+/* Restart Button CSS - Center it in the middle of the screen */
+#restart-button {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Suggestions container must be scrollable */
+#suggestions {
+    max-height: 200px; /* Set your desired height */
+    overflow-y: auto;  /* Enable scrolling */
+}
+
+.suggestion {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.suggestion img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+/* Highlighted suggestion styles */
+.suggestion.highlighted {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Book category buttons */
+#book-categories button {
+    background-color: #8e44ad;
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#book-categories button:hover {
+    background-color: #732d91;
+}
+
+#guessedWordsElement p {
+    color: inherit;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: center; /* Center buttons as a group */
+    align-items: center; /* Center buttons horizontally */
+    margin-top: 20px; /* Add spacing above the buttons */
+    gap: 10px; /* Space between the two buttons */
+}
+
+#restart-button,
+#new-game-button {
+    background-color: #e74c3c; /* Red background for buttons */
+    color: white; /* White text */
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#restart-button:hover,
+#new-game-button:hover {
+    background-color: #c0392b; /* Slightly darker red on hover */
+}

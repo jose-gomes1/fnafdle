@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fnafdle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/default.png">
+</head>
+<body>
+    <div class="container">
+        <h1>FNAFdle</h1>
+
+        <!-- Mode Selection -->
+        <div id="mode-selection">
+            <button id="choose-characters">Play Character Guessing Game</button>
+            <button id="choose-books">Play Book Guessing Game</button>
+        </div>
+
+        <!-- Book Categories (hidden by default) -->
+        <div id="book-categories" style="display: none;">
+            <button data-category="trilogy">Trilogy</button>
+            <button data-category="frights">Frights</button>
+            <button data-category="tales">Tales</button>
+            <button data-category="files">Files</button>
+            <button data-category="interactive">Interactive</button>
+            <button data-category="all">All Books</button>
+        </div>
+
+        <!-- Game Area -->
+        <div id="game-area" style="display: none;">
+            <p id="hint">Hint: The word has <span id="word-length"></span> letters.</p>
+            <p id="display-word"></p>
+            <p>Guessed Letters: <span id="guessed-letters"></span></p>
+            <p>Remaining Attempts: <span id="remaining-attempts"></span></p>
+            
+            <input type="text" id="guess-input" placeholder="Guess a letter or the full name" maxlength="50">
+            <button id="guess-button">Guess</button>
+            
+            <!-- Dynamic Filtering Suggestions -->
+            <div id="suggestions">
+                <div class="suggestion">Suggestion 1</div>
+                <div class="suggestion">Suggestion 2</div>
+                <div class="suggestion">Suggestion 3</div>
+                <!-- More suggestions... -->
+            </div>
+            
+            <div id="guessedWordsElement"><p>Guesses: </p></div>
+            <p id="message"></p>
+            <div id="button-container">
+                <button id="new-game-button">Restart Game</button>
+                <button id="restart-button">Return to Lobby</button>
+            </div>            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>

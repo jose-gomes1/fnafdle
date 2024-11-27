@@ -54,7 +54,7 @@ const books = {
 const locations = [
     "Freddy Fazbear's Pizza (1983)", "New and Improved Freddy Fazbear's Pizza (1987)", "Freddy Fazbear's Pizza (Fnaf 1)", "Fredbear's Family Dinner",
     "Freddy Fazbear's Pizza Place", "Fazbear's Fright", "Freddy Fazbear's Mega Pizza Plex", "House (Fnaf 4)", "Chica's Party World", "Circus Baby's Entertainment and Rentals",
-    "Circus Baby's Pizza World", "El Chip's Diner", "Freddy Fazbear Virtual Experience", "JR's", "Sparky's Coffee Shop", "Afton Robotics, LLC"
+    "Circus Baby's Pizza World", "El Chip's Diner", "Freddy Fazbear Virtual Experience", "JR's", "Sparky's Coffee Shop", "Afton Robotics, LLC", "Jeff's Pizza"
 ];
 
 const fnafImages = {
@@ -262,7 +262,8 @@ const fnafImages = {
     "Freddy Fazbear Virtual Experience": "images/area/vr.png", 
     "JR's": "images/area/jrs.png", 
     "Sparky's Coffee Shop": "images/area/sparky.png", 
-    "Afton Robotics, LLC": "images/area/afton.png"
+    "Afton Robotics, LLC": "images/area/afton.png",
+    "Jeff's Pizza": "images/area/jeff.png"
 };
 
 // Game state variables

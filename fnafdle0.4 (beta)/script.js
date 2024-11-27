@@ -324,6 +324,7 @@ function triggerConfetti() {
 }
 
 function handleCorrectGuess() {
+    
     displayWord = currentWord.split("");
     guessedWords.add(currentWord);
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Guessing Game</title>
+    <link rel="stylesheet" href="style.css"> <!-- Include your custom CSS -->
+</head>
+<body>
+    <div id="game-area" class="game-container">
+        <h1>Emoji Guessing Game</h1>
+        
+        <!-- Emoji Clue -->
+        <div id="emoji-display" class="emoji-display"></div>
+        
+        <!-- Display Word -->
+        <div id="display-word" class="display-word">
+            <!-- Display the underscores or the correct guessed letters here -->
+        </div>
+        
+        <!-- User Input for Guess -->
+        <input type="text" id="guess-input" class="guess-input" placeholder="Enter letter or full name" autofocus>
+        <button id="submit-guess" class="submit-guess">Guess</button>
+
+        <!-- Suggestions for character names -->
+        <ul id="suggestions" class="suggestions-list"></ul>
+
+        <!-- Guessed Letters Section -->
+        <div id="guessed-letters">
+            <p>Guessed letters: <span id="guessed-letters-content"></span></p>
+        </div>
+
+        <!-- Attempts Left Section -->
+        <div id="remaining-attempts">
+            <p>Remaining Attempts: <span id="attempts-left">7</span></p>
+        </div>
+
+        <!-- Message Display -->
+        <div id="message" class="message"></div>
+
+        <!-- Restart Button -->
+        <button id="restart-button" class="restart-button" style="display: none;">Restart Game</button>
+        <a href="../index.html">
+            <button id="return-to-lobby-btn">Return to Lobby</button>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script> <!-- Confetti Script -->
+    <script src="script.js"></script> <!-- Include your custom JavaScript file -->
+</body>
+</html>

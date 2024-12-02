@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'FNaF';
+    src: url('fonts/FiveFontsatFreddy\'s-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'FNaF', sans-serif;
+    background-color: #1d1e20;
+    color: #fff;
+    text-align: center;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    font-family: 'FNaF', sans-serif;
+    max-width: 600px;
+    background-color: #222326;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 208, 0, 0.5);
+    width: 100%; /* Ensure container takes full available width */
+    text-align: center; /* Center the content inside the container */
+}
+
+button {
+    font-family: 'FNaF', sans-serif;
+    background-color: #C88600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    font-family: 'FNaF', sans-serif;
+    background-color: #9e6900;
+}
+
+#return-to-lobby-btn {
+    font-family: 'FNaF', sans-serif;
+    background-color: #C88600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#return-to-lobby-btn:hover {
+    background-color: #9e6900;
+}

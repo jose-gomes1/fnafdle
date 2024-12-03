@@ -190,3 +190,35 @@ input {
 #new-game-button:hover {
     background-color: #9e6900; /* Slightly darker red on hover */
 }
+
+.center-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center align the text */
+}
+
+.link-with-image {
+    display: flex; /* Align the image and text horizontally */
+    align-items: center; /* Vertically center the image and text */
+    margin-top: 10px; /* Optional: Add spacing above the link */
+}
+
+.link-with-image img {
+    width: 50px; /* Adjust size of the icon */
+    height: 50px;
+    margin-right: 10px; /* Space between the image and the text */
+    border-radius: 5px; /* Optional: Add rounded corners to the image */
+}
+
+.link-with-image a {
+    text-decoration: none; /* Remove underline */
+    color: #C88600; /* Match the "try" class color */
+    font-weight: bold; /* Bold text for the link */
+    font-size: 1rem; /* Adjust text size */
+}
+
+.link-with-image a:hover {
+    color: #9e6900; /* Match hover style of "try" class */
+}

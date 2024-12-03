@@ -108,7 +108,6 @@ input {
 /* Restart and new game buttons */
 #restart-button,
 #new-game-button {
-    display: none;
     background-color: #C88600;
     color: white;
     padding: 10px 20px;

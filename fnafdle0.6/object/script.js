@@ -14,7 +14,9 @@ const fnafImages = {
     "Glitchtrap Plushie": "images/plush.png",
     "Roxy's eyes": "images/eyes.png",
     "Monty's claws": "images/mclaw.png",
-    "Chica's Voice Box": "images/box.png"
+    "Chica's Voice Box": "images/box.png",
+    "Freddy Mask": "images/fmask.png",
+    "Flashlight": "images/flash.png"
 };
 
 let currentWord = ""; 
@@ -49,7 +51,6 @@ function startGame(wordList) {
     document.getElementById("hint").innerHTML = `Hint: The object has <strong>${currentWord.replace(/ /g, "").length}</strong> letters.`;
     blurredImage.src = fnafImages[currentWord] || "images/default.png";
     blurredImage.style.filter = "blur(7px)";
-    document.getElementById("restart-button").style.display = "none";
     document.getElementById("guess-input").value = "";
     suggestionsContainer.style.display = "none";
 }
@@ -127,6 +128,15 @@ function handleGuess() {
     }
 }
 
+function triggerConfetti() {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },  // Set the origin to be a bit lower on the screen
+    });
+
+    // You can also adjust the properties like particleCount, spread, and origin as needed.
+}
 
 // Handle correct guess
 function handleCorrectGuess() {
@@ -135,6 +145,7 @@ function handleCorrectGuess() {
     updateDisplay();
     messageElement.textContent = `Congratulations! You guessed the object: ${currentWord.toUpperCase()}`;
     blurredImage.style.filter = "none"; // Reveal image
+    triggerConfetti();
     endGame();
 }
 
@@ -166,17 +177,15 @@ function filterSuggestions(input) {
 }
 
 
-// End the game
-function endGame() {
-    document.getElementById("restart-button").style.display = "block";
-}
-
 // Event listeners
 document.getElementById("guess-button").addEventListener("click", handleGuess);
 document.getElementById("guess-input").addEventListener("input", (e) => {
     filterSuggestions(e.target.value); // Filter suggestions as the user types
 });
-document.getElementById("restart-button").addEventListener("click", () => startGame(Object.keys(fnafImages)));
+document.getElementById("restart-button").style.display = "block";
+document.getElementById("restart-button").addEventListener("click", () => {
+    startGame(Object.keys(fnafImages));
+});
 document.getElementById("back-button").addEventListener("click", () => {
     window.location.href = "../index.html";
 });

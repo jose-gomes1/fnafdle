@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'FNaF';
+    src: url('fonts/FiveFontsatFreddy\'s-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'FNaF', sans-serif;
+    background-color: #1d1e20;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    font-family: 'FNaF', sans-serif;
+    text-align: center;
+    background-color: #222326;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(255, 208, 0, 0.5);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: 'FNaF', sans-serif;
+    background-color: #C88600;
+    color: white;
+    border: none;
+    padding: 5px 7px;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9e6900;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    width: calc(100% - 24px);
+    margin-bottom: 10px;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    color: #222326;
+}
+
+#message {
+    font-weight: bold;
+}
+
+#display-word {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    letter-spacing: 5px;
+}
+
+/* Dynamic suggestions */
+#suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+    background-color: #ecf0f1;
+    color: #222326;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#suggestions li {
+    padding: 10px;
+    border-bottom: 1px solid #bdc3c7;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #222326;
+    color: white;
+}
+
+#suggestions li:hover {
+    background-color: #9e6900;
+    color: white;
+}
+
+.suggestion img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Restart and new game buttons */
+#restart-button,
+#new-game-button {
+    background-color: #C88600;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#restart-button:hover,
+#new-game-button:hover {
+    background-color: #9e6900;
+}
+
+/* Button container */
+#button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+/* Blurred image */
+#blurred-image {
+    width: 300px;
+    filter: blur(7px);
+    margin-bottom: 15px;
+    transition: filter 0.3s ease;
+}
+
+#blurred-image.revealed {
+    filter: none;
+}
+
+/* Remaining attempts and guessed words */
+#remaining-attempts {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+#guessedWordsElement p {
+    margin: 5px 0;
+    color: #ecf0f1;
+}
+
+.correct-guess {
+    color: #27ae60;
+}
+
+.incorrect-guess {
+    color: #e74c3c;
+}

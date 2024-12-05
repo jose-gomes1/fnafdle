@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'FNaF';
+    src: url('fonts/FiveFontsatFreddy\'s-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'FNaF', sans-serif;
+    background-color: #1d1e20;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title img {
+    width: 70%; /* Adjust percentage or set a specific size */
+    max-width: 600px; /* Optional: Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.game-container {
+    font-family: 'FNaF', sans-serif;
+    text-align: center;
+    background-color: #222326;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(255, 208, 0, 0.5);
+}
+
+h1 {
+    font-size: 4rem;
+    color: #f39c12;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#quote-display {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f39c12;
+    font-weight: bold;
+}
+
+input {
+    padding: 15px;
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 20px 0;
+    border: 2px solid #7f8c8d;
+    border-radius: 10px;
+    background-color: #ecf0f1;
+    color: #222326;
+}
+
+button {
+    font-family: 'FNaF', sans-serif;
+    background-color: #C88600;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+button:hover {
+    background-color: #9e6900;
+}
+
+#guessed-letters {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+#guessed-letters-content {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f39c12;
+}
+
+#remaining-attempts {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+#message {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #e74c3c;
+}
+
+#restart-button {
+    font-family: 'FNaF', sans-serif;
+    background-color: #C88600;
+    color: white;
+    border: none;
+    padding: 5px 7px;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#restart-button:hover {
+    background-color: #9e6900;
+}
+
+#back-button {
+    font-family: 'FNaF', sans-serif;
+    background-color: #C88600;
+    color: white;
+    border: none;
+    padding: 5px 7px;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#back-button:hover {
+    background-color: #9e6900;
+}
+
+/* Suggestions List */
+#suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+    background-color: #ecf0f1;
+    color: #222326;
+    border: 1px solid #7f8c8d;
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#suggestions li {
+    padding: 12px;
+    border-bottom: 1px solid #bdc3c7;
+    cursor: pointer;
+    background-color: #222326;
+    color: white;
+}
+
+#suggestions li:hover {
+    background-color: #f39c12;
+}
+
+/* Highlighted suggestion styles */
+.suggestion.highlighted {
+    background-color: #f39c12;
+    color: white;
+}

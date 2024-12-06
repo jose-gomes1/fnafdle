@@ -59,7 +59,7 @@ function generateRandomStats(ip) {
     const topGameMode = gameModes[Math.floor(Math.random() * gameModes.length)];
 
     // Random Jumpscares Survived
-    const jumpscaresSurvived = (randomSeed % 10) + 5; // Range from 5 to 14
+    const jumpscaresSurvived = (randomSeed % 95) + 5; // Range from 5 to 14
 
     return { totalNights, randomCharacters, topGameMode, jumpscaresSurvived };
 }

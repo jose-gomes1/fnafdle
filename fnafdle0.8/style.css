@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'FNaF';
+    src: url('fonts/FiveFontsatFreddy\'s-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'FNaF', sans-serif;
+    background-color: #1d1e20;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title img {
+    width: 70%; /* Adjust percentage or set a specific size */
+    max-width: 600px; /* Optional: Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.container {
+    font-family: 'FNaF', sans-serif;
+    text-align: center;
+    background-color: #222326;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(255, 208, 0, 0.5);
+}
+
+.try{
+    color: #C88600;
+}
+
+.try:hover{
+    color: #9e6900;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: 'FNaF', sans-serif;
+    background-color: #C88600;
+    color: white;
+    border: none;
+    padding: 5px 7px;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9e6900;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    width: calc(100% - 24px);
+    margin-bottom: 10px;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+}
+
+#message {
+    font-weight: bold;
+}
+
+#display-word {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    letter-spacing: 5px;
+}
+
+/* Styles for dynamic suggestions */
+#suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+    background-color: #ecf0f1;
+    color: #222326;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#suggestions li {
+    padding: 10px;
+    border-bottom: 1px solid #bdc3c7;
+    cursor: pointer;
+    background-color: #222326;
+    color: white;
+}
+
+#suggestions li:hover {
+    background-color: #222326;
+}
+
+/* Restart Button CSS - Center it in the middle of the screen */
+#restart-button {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Suggestions container must be scrollable */
+#suggestions {
+    max-height: 200px; /* Set your desired height */
+    overflow-y: auto;  /* Enable scrolling */
+}
+
+.suggestion {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.suggestion img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+/* Highlighted suggestion styles */
+.suggestion.highlighted {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Book category buttons */
+#book-categories button {
+    background-color: #C88600;
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#book-categories button:hover {
+    background-color: #9e6900;
+}
+
+#guessedWordsElement p {
+    color: inherit;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: center; /* Center buttons as a group */
+    align-items: center; /* Center buttons horizontally */
+    margin-top: 20px; /* Add spacing above the buttons */
+    gap: 10px; /* Space between the two buttons */
+}
+
+#restart-button,
+#new-game-button {
+    background-color: #C88600; /* Red background for buttons */
+    color: white; /* White text */
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#restart-button:hover,
+#new-game-button:hover {
+    background-color: #9e6900; /* Slightly darker red on hover */
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center align the text */
+}
+
+.link-with-image {
+    display: flex; /* Align the image and text horizontally */
+    align-items: center; /* Vertically center the image and text */
+    margin-top: 10px; /* Optional: Add spacing above the link */
+}
+
+.link-with-image img {
+    width: 50px; /* Adjust size of the icon */
+    height: 50px;
+    margin-right: 10px; /* Space between the image and the text */
+    border-radius: 5px; /* Optional: Add rounded corners to the image */
+}
+
+.link-with-image a {
+    text-decoration: none; /* Remove underline */
+    color: #C88600; /* Match the "try" class color */
+    font-weight: bold; /* Bold text for the link */
+    font-size: 1rem; /* Adjust text size */
+}
+
+.link-with-image a:hover {
+    color: #9e6900; /* Match hover style of "try" class */
+}

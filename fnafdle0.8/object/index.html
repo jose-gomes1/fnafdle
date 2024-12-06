@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Object Guessing Game</h1>
+        <div id="game-area" style="display: none;">
+            <p id="hint"></p>
+            <div id="display-container">
+                <img id="blurred-image" src="" alt="Blurred Object" style="width: 300px; filter: blur(7px); margin-bottom: 15px;">
+                <p id="display-word"></p>
+            </div>
+            <p>Remaining Attempts: <span id="remaining-attempts">7</span></p>
+            <div id="guess-section">
+                <input type="text" id="guess-input" placeholder="Enter your guess" autofocus>
+                <ul id="suggestions" style="display: none;"></ul>
+                <button id="guess-button">Guess</button>
+            </div>
+            <div id="guessedWordsElement"><p>Guesses: </p></div>
+            <p id="guessed-letters">Guessed Letters: <span id="guessed-letters"></span></p>
+            <p id="message"></p>
+            <div id="button-container">
+                <button id="restart-button" style="display: block;">Restart</button>
+                <button id="back-button">Back to Main Menu</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

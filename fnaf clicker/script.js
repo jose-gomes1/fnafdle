@@ -21,7 +21,7 @@ const animatronics = [
     { name: "Freddy Fazbear", cost: 1000, pps: 50, img: "images/freddy.png", owned: 0 },
     { name: "Golden Freddy", cost: 5000, pps: 100, img: "images/golden.png", owned: 0 },
     { name: "The Mimic Endo", cost: 7500, pps: 250, img: "images/mimic.png", owned: 0 },
-    { name: "Springtrap", cost: 20000, pps: 500, img: "images/springtrap.png", owned: 0 } 
+    { name: "Springtrap .", cost: 20000, pps: 500, img: "images/springtrap.png", owned: 0 }
 ];
 
 let pizzaCount = 0;
@@ -44,8 +44,6 @@ pizzaElement.addEventListener("click", (event) => {
     // Reset size after the click animation
     setTimeout(() => (pizzaElement.style.transform = "scale(1)"), 100);
 });
-
-
 
 function createFloatingPizza(x, y) {
     const floatingPizza = document.createElement("div");
@@ -106,7 +104,7 @@ function buyAnimatronic(index, event) {
         pizzaCount -= animatronic.cost;
         pizzasPerSecond += animatronic.pps;
         animatronic.owned++;
-        animatronic.cost = Math.ceil(animatronic.cost * (1.2 + 0.1 * animatronic.owned)); // Increase cost dynamically
+        animatronic.cost = Math.ceil(animatronic.cost * 1.2); // Increase cost dynamically
 
         if (animatronic.owned === 1) {
             displayAnimatronic(animatronic.img);

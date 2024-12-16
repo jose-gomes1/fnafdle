@@ -33,12 +33,39 @@ const ppsElement = document.getElementById("pps");
 const animatronicsContainer = document.getElementById("animatronics");
 const animatronicDisplay = document.getElementById("animatronic-display");
 
-pizzaElement.addEventListener("click", () => {
+pizzaElement.addEventListener("click", (event) => {
     pizzaElement.style.transform = "scale(1.2)"; // Grow pizza on click
     pizzaCount++;
     updateDisplay();
-    setTimeout(() => (pizzaElement.style.transform = "scale(1)"), 100); // Reset size
+
+    // Trigger floating pizza animation at mouse pointer position
+    createFloatingPizza(event.clientX, event.clientY);
+
+    // Reset size after the click animation
+    setTimeout(() => (pizzaElement.style.transform = "scale(1)"), 100);
 });
+
+
+
+function createFloatingPizza(x, y) {
+    const floatingPizza = document.createElement("div");
+    floatingPizza.textContent = "+1"; // Text to display
+    floatingPizza.className = "floating-pizza";
+    floatingPizza.style.left = `${x}px`; // Horizontal position
+    floatingPizza.style.top = `${y}px`;  // Vertical position
+    document.body.appendChild(floatingPizza);
+
+    // Animate the pizza upwards and fade out
+    setTimeout(() => {
+        floatingPizza.style.transform = "translateY(-50px)";
+        floatingPizza.style.opacity = "0";
+    }, 10);
+
+    // Remove the element after the animation
+    setTimeout(() => {
+        floatingPizza.remove();
+    }, 1000);
+}
 
 function updateDisplay() {
     pizzaCountElement.textContent = formatNumber(Math.floor(pizzaCount));

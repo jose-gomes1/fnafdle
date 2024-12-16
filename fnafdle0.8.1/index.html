@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fnafdle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/default.png">
+    <link href="fonts/FiveFontsatFreddy's-Regular.ttf" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <img src="images/fnafdle.png" alt="Fnafdle">
+        </div>
+        <!-- Mode Selection -->
+        <div id="mode-selection">
+            <button id="choose-characters">Play Character Guessing Game</button>
+            <button id="choose-books">Play Book Guessing Game</button>
+            <button id="choose-locations">Play Location Guessing Game</button>
+            <!-- Add this in the mode selection area -->
+            <a href="object/index.html">
+                <button id="choose-object-guessing">Play Object Guessing Game</button>
+            </a>
+            <a href="emoji/index.html">
+                <button id="choose-emoji-guessing">Play Emoji Guessing Game</button>
+            </a>
+            <a href="quote/index.html">
+                <button id="choose-quote-repair">
+                    Quote Guessing
+                </button>
+            </a>
+            <a href="description/index.html">
+                <button id="choose-desc-repair">
+                    Description Guessing
+                </button>
+            </a>
+            <a href="vent/index.html">
+                <button id="choose-vent-repair">
+                    Vent Repair Game
+                </button>
+            </a>
+            <a href="rewind/index.html">
+                <button id="choose-wrapped-repair">
+                    FNAF Wrapped
+                </button>
+            </a>
+            <div class="center-content">
+                <p>Also try:</p>
+                <div class="link-with-image">
+                    <img src="images/undertadle.png" alt="Undertadle Icon">
+                    <a href="https://gamejolt.com/games/undertalelde/943870" class="try">Undertadle</a>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        <!-- Book Categories (hidden by default) -->
+        <div id="book-categories" style="display: none;">
+            <button data-category="trilogy">Trilogy</button>
+            <button data-category="frights">Frights</button>
+            <button data-category="tales">Tales</button>
+            <button data-category="files">Files</button>
+            <button data-category="interactive">Interactive</button>
+            <button data-category="all">All Books</button>
+        </div>
+        <!-- Game Area -->
+        <div id="game-area" style="display: none;">
+            <p id="hint">Hint: The word has <span id="word-length"></span> letters.</p>
+            <p id="display-word"></p>
+            <p>Guessed Letters: <span id="guessed-letters"></span></p>
+            <p>Remaining Attempts: <span id="remaining-attempts"></span></p>
+            <input type="text" id="guess-input" placeholder="Guess a letter or the full name" maxlength="50">
+            <button id="guess-button">Guess</button>
+            
+            <!-- Dynamic Filtering Suggestions -->
+            <div id="suggestions">
+                <div class="suggestion">Suggestion 1</div>
+                <div class="suggestion">Suggestion 2</div>
+                <div class="suggestion">Suggestion 3</div>
+                <!-- More suggestions... -->
+            </div>
+            
+            <div id="guessedWordsElement"><p>Guesses: </p></div>
+            <p id="message"></p>
+            <div id="button-container">
+                <button id="new-game-button">Restart Game</button>
+                <button id="restart-button">Return to Lobby</button>
+            </div>            
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>

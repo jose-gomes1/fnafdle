@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'FNaF';
+    src: url('fonts/FiveFontsatFreddy\'s-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'FNaF', sans-serif;
+}
+
+body {
+    text-align: center;
+    background-color: #000066; /* Blue Background */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.game-area {
+    width: 70%;
+    text-align: center;
+}
+
+.shop-area {
+    background-color: #222326;
+    padding: 10px;
+    box-shadow: -3px 0px 5px rgba(255, 208, 0, 0.5);
+    width: 1500px;
+    height: 390px;
+}
+
+.pizza {
+    width: 150px;
+    cursor: pointer;
+}
+
+.stats {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.shop {
+    margin-top: 20px;
+    display: flex;
+}
+
+.animatronic {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    width: 30%;
+    height: 10%;
+}
+
+.animatronic button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #C88600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 45%;
+    height: 50%;
+}
+
+.animatronic button:disabled {
+    background: #9e6900;
+    cursor: not-allowed;
+    width: 45%;
+    height: 50%;
+}
+
+.animatronic-display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.animatronic-display img {
+    height: 250px;
+    margin: 10px;
+}
+
+#pizza {
+    transition: transform 0.2s ease-in-out;
+}
+
+#pizza:hover {
+    transform: scale(0.8); /* Shrinks when hovered */
+}

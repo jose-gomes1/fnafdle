@@ -5,21 +5,22 @@
     font-style: normal;
 }
 
-*{
+* {
     font-family: 'FNaF', sans-serif;
+    user-select: none;
 }
 
 body {
-    position: relative; /* Enables positioning for the pseudo-element */
+    position: relative;
     text-align: center;
-    background-color: #000; /* Fallback for browsers without background image */
+    background-color: #000;
     color: #fff;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -32,23 +33,30 @@ body::before {
     height: 100%;
     background: url('images/bg.png') no-repeat center center fixed;
     background-size: cover;
-    filter: blur(15px); /* Blur effect */
-    z-index: -1; /* Ensure it stays behind content */
-    opacity: 0.9; /* Slight transparency for depth effect */
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0.9;
 }
 
 .game-area {
-    z-index: 1; /* Ensure content is above blurred background */
+    z-index: 1;
     width: 70%;
     text-align: center;
 }
 
 .shop-area {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* Adjust to your preferred sidebar width */
+    height: 100%; /* Extend from top to bottom */
     background-color: #222326;
     padding: 10px;
     box-shadow: -3px 0px 5px rgba(255, 208, 0, 0.5);
-    width: 1500px;
-    height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto; /* Allow scrolling if content overflows */
 }
 
 .pizza {
@@ -64,6 +72,8 @@ body::before {
 .shop {
     margin-top: 20px;
     display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust space between items */
 }
 
 .animatronic {
@@ -73,7 +83,7 @@ body::before {
     border-radius: 5px;
     background: #333;
     color: #fff;
-    width: 30%;
+    width: 100%;
     height: 10%;
 }
 
@@ -113,17 +123,17 @@ body::before {
 }
 
 #pizza:hover {
-    transform: scale(0.8); /* Shrinks when hovered */
+    transform: scale(0.8);
 }
 
 .floating-pizza {
     position: absolute;
     font-size: 20px;
     font-weight: bold;
-    color: #ffcc00; /* Bright yellow */
+    color: #ffcc00;
     text-shadow: 0 0 5px #000, 0 0 10px #ff9900;
-    pointer-events: none; /* Prevent interference with clicks */
+    pointer-events: none;
     transition: transform 1s ease-out, opacity 1s ease-out;
     z-index: 1000;
-    transform: translate(-50%, -50%); /* Center the text on the mouse */
+    transform: translate(-50%, -50%);
 }

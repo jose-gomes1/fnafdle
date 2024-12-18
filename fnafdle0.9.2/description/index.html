@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the FNaF Character</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="title">
+            <img src="../images/fnafdle.png" alt="FNaF Logo">
+        </header>
+        <main class="center-content">
+            <h1>Who Am I?</h1>
+            <p id="description">Loading character...</p>
+            <input type="text" id="guess-input" placeholder="Type your guess here..." autocomplete="off">
+            <ul id="suggestions"></ul>
+            <!-- Guesses Section -->
+<div>
+    <h3>Guesses:</h3>
+    <p id="guesses-list">No guesses yet.</p> <!-- This will display the guesses -->
+  </div>
+  
+            <p id="message"></p>
+            <div id="button-container">
+                <button id="guess-button">Submit Guess</button>
+                <button id="restart-button" style=>Play Again</button>
+                <a href = "../index.html">
+                    <button>Go back</button>
+                </a>
+            </div>
+        </main>
+        <footer class="link-with-image">
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

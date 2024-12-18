@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNaF Pizza Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/default.png">
+    <link href="fonts/FiveFontsatFreddy's-Regular.ttf" rel="stylesheet">
+</head>
+<body>
+    <div class="game-area">
+        <h1>FNaF Pizza Clicker</h1>
+        <div>
+            <img src="images/pizza-slice.png" alt="Pizza" class="pizza" id="pizza" />
+        </div>
+        <div class="stats">
+            <p><strong><span id="pizza-count">0</span></strong> pizzas</p>
+            <p><strong><span id="pps">0</span></strong> slice per second</p>
+        </div>
+        <div class="animatronic-display" id="animatronic-display"></div>
+        <button id="evolve-button">Upgrade Slicer</button>
+        <p id="slicer-cost"></p>
+        <p id="click-power">Click Power: x1</p>
+    </div>
+
+    <div class="shop-area">
+        <div class="shop" id="animatronics"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+<footer>
+    <a href="../index.html">
+        <button id="return-to-lobby-btn">Return to Lobby</button>
+    </a>
+</footer>
+</html>

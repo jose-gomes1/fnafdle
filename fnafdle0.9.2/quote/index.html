@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Guessing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-area" class="game-container">
+        <div class="title">
+            <img src="../images/fnafdle.png" alt="Fnafdle">
+        </div>
+
+        <!-- Quote Display -->
+        <div id="quote-display" class="quote-display"></div>
+
+        <!-- User Input for Guess -->
+        <input type="text" id="guess-input" class="guess-input" placeholder="Guess a letter or the full name" autofocus>
+
+        <!-- Button to Submit Guess -->
+        <button id="submit-guess" class="submit-guess">Guess</button>
+
+        <!-- Suggestions List -->
+        <ul id="suggestions"></ul>
+
+        <!-- Guessed Letters Section -->
+        <div id="guessed-letters">
+            <p>Guesses: <span id="guessed-letters-content"></span></p>
+        </div>
+        
+        <!-- Attempts Left Section -->
+        <div id="remaining-attempts">
+            <p>Remaining Attempts: <span id="attempts-left">7</span></p>
+        </div>
+
+        <!-- Message Display -->
+        <div id="message" class="message"></div>
+
+
+        <!-- Restart Button -->
+        <button id="restart-button" class="restart-button">Restart Game</button>
+        <a href="../index.html">
+            <button id="back-button" class="back-button">Return to Lobby</button>
+        </a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script> <!-- Confetti Script -->
+    <script src="script.js"></script>
+</body>
+</html>
